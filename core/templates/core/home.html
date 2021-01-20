@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Inicio{% endblock %}
+{% block content %}
+<div class="container">
+  <div style="padding-top:50px; text-align:center;">
+    <h1>{{title}}</h1>
+    {% if not request.user.is_authenticated %}
+      <p class="lead">Gracias por aceptarme para realizar este reto :), inicia sesión o registrate para continuar.</p>          
+    {% else %}
+      <p class="lead">Utiliza el menu para realizar las diferentes acciones :)</p>
+    {%endif%}
+  </div>
+</div>
+{% endblock %}
